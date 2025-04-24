@@ -131,6 +131,36 @@ img:hover{
     width: 100%;
 }
 
+.sobreAloja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.textoSobre{
+    margin-left: 2.0rem;
+    width: 100%;
+}
+.textoSobre p, h2{
+    font-size: 2.8rem;
+}
+.textoSobre h2{
+    padding-bottom: 0.8rem;
+}
+.imgsobre img{
+    width: 100%;
+}
+
+.containersobre{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    gap: 0.2rem;
+}
+.containersobre img{
+    font-size: 10rem;
+}
+
 .container-img2 .preço{
     display: flex;
     flex-direction: column;
@@ -197,11 +227,29 @@ img:hover{
     display: none;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
     .missão h3{
         margin-bottom: 3rem;
         
     }
+    .container-img2{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+        .containersobre{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .containersobre img{
+            width: 18rem;
+        }
+       .textoSobre{
+        margin: 0;
+       }
+       .imgsobre img{
+        width: 100%;
+       }
 }
 
 @media (min-width: 768px){
@@ -225,6 +273,10 @@ img:hover{
     }
     .menu ul li{
         padding: 1.5rem;
+    }
+
+    .primeira-seção{
+        height: auto;
     }
     .primeira-seção .container-banner{
      height: 40rem;
@@ -259,5 +311,8 @@ img:hover{
         gap: 20px;
         width: 100%;
         padding: 10rem;
+    }
+    .textoSobre ul{
+        width: 100%;
     }
 }
